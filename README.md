@@ -31,7 +31,7 @@ This commands includes
 
 ## Program :
 ### Client :
-```
+```python
 import socket 
 from pythonping import ping 
 s=socket.socket() 
@@ -46,7 +46,7 @@ while True:
         c.send("Not Found".encode())
 ```
 ### Server :
-```
+```python
 import socket 
 s=socket.socket() 
 s.connect(('localhost',8000)) 
@@ -56,7 +56,7 @@ while True:
     print(s.recv(1024).decode())
 ```
 ### Traceroute Command :
-```
+```python
 from scapy.all import* 
 target = ["www.google.com"] 
 result, unans = traceroute(target,maxttl=32) 
